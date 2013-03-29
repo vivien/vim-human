@@ -11,7 +11,7 @@ let g:loaded_human = 1
 augroup human
     autocmd!
 
-    autocmd BufNewFile,BufRead *.{md,markdown} setfiletype markdown
+    autocmd BufNewFile,BufRead *.{md,mdown,markdown} setlocal filetype=markdown
     autocmd FileType markdown call s:HumanSpellChecking()
     autocmd FileType markdown call s:HumanFormatting()
 
