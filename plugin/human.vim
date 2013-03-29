@@ -12,14 +12,16 @@ augroup human
     autocmd!
 
     autocmd BufNewFile,BufRead *.{md,mdown,markdown} setlocal filetype=markdown
-    autocmd FileType markdown call s:HumanSpellChecking()
-    autocmd FileType markdown call s:HumanFormatting()
 
-    autocmd BufNewFile,BufRead *.txt call s:HumanSpellChecking()
-    autocmd BufNewFile,BufRead *.txt call s:HumanFormatting()
-    autocmd FileType help setlocal nospell
+    autocmd FileType markdown,rst,asciidoc,pod call s:HumanSpellChecking()
+    autocmd FileType markdown,rst,asciidoc,pod call s:HumanFormatting()
+
+    autocmd BufNewFile,BufRead *.{txt,textile,rdoc,org,creole,mediawiki} call s:HumanSpellChecking()
+    autocmd BufNewFile,BufRead *.{txt,textile,rdoc,org,creole,mediawiki} call s:HumanFormatting()
 
     autocmd FileType gitcommit call s:HumanSpellChecking()
+
+    autocmd FileType help setlocal nospell
 augroup END
 
 function s:HumanSpellChecking()
