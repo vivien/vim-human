@@ -37,7 +37,7 @@ function s:HumanFormatting()
     setlocal textwidth=0
     setlocal wrap
     setlocal autoindent
-    setlocal formatoptions=tnbl1
+    setlocal formatoptions=tnbl1aw
 endfunction
 
 if !exists(":HumanSpellChecking")
