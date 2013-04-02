@@ -36,6 +36,7 @@ function s:HumanSpellChecking()
 endfunction
 
 function s:HumanFormatting()
+    setlocal nojs
     setlocal textwidth=0
     setlocal wrap
     setlocal autoindent
