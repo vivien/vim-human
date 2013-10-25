@@ -1,5 +1,5 @@
 " Vim plugin to enhance the writing of human readable formats, such as Markdown.
-" Last Change:  2013 Mars 15
+" Last Change:  2013 October 25
 " Maintainer:   Vivien Didelot <vivien@didelot.org>
 " License:      This file is distributed under the Beerware license.
 
@@ -36,6 +36,7 @@ function s:HumanSpellChecking()
 endfunction
 
 function s:HumanFormatting()
+    setlocal et ts=4 sw=4
     setlocal nojs
     setlocal textwidth=0
     setlocal wrap
